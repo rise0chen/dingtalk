@@ -6,7 +6,7 @@ license = "MIT"
 name = "dingtalk_robot"
 readme = "README.md"
 repository = "https://github.com/rise0chen/dingtalk"
-version = "0.1.0"
+version = "0.1.1"
 
 [features]
 default = ["native-tls"]

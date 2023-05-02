@@ -108,6 +108,7 @@ pub enum ActionCardAction {
         single_url: String,
     },
     Multi {
+        #[serde(rename = "btnOrientation")]
         btn_orientation: ActionCardBtnOrientation,
         btns: Vec<ActionCardBtn>,
     },
