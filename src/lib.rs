@@ -8,7 +8,7 @@ use msg::Message;
 use resp::Response;
 use sha2::Sha256;
 use sign::Sign;
-use std::io::{Error, ErrorKind};
+use std::io::Error;
 use std::time::SystemTime;
 
 type Result<T> = core::result::Result<T, Box<dyn std::error::Error>>;
@@ -44,7 +44,7 @@ impl DingTalk {
         if resp.errcode == 0 {
             Ok(())
         } else {
-            Err(Error::new(ErrorKind::Other, resp.errmsg).into())
+            Err(Error::other(resp.errmsg).into())
         }
     }
 
